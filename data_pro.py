@@ -110,3 +110,5 @@ for file in file_path:
     new_data = change_res(result)
     name = ''.join(re.findall(r'IR_data\\(.+?).txt', file))
     np.save(new_path+str(name)+'.npy',new_data)
+    
+print('done')
