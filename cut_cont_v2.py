@@ -81,9 +81,10 @@ for file in file_path:
     flux = img[:, 1]
     flux_raw = copy.deepcopy(flux)
 
+# emissions对应需要屏蔽的发射线位置，如果扣除连续谱后需要保留发射线，则需要将emissions和mask_intervals合并。
+emissions = np.array([[6.98, 7.01], [7.65, 7.68]])  
 
-emissions = np.array([[6.98, 7.01], [7.65, 7.68]])
-
+# mask_intervals对应需要屏蔽的UIE波段位置
 mask_intervals = np.array([[6.21, 6.38], [7.94, 8.24]])
 
 
